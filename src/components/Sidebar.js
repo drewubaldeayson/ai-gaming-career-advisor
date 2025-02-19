@@ -5,7 +5,7 @@ const Sidebar = () => {
 
   return (
     <div className="w-64 bg-gray-800 h-screen fixed left-0 top-0 p-6">
-      <h2 className="text-white text-xl font-bold mb-4">AI Gaming Career Advisor</h2>
+      <h2 className="text-white text-xl font-bold mb-4">Gareer Guide</h2>
       <button onClick={() => navigate("/dashboard")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">🏠 Dashboard</button>
       <button onClick={() => navigate("/dashboard/career-insights")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">📈 Career Insights</button>
       <button onClick={() => navigate("/dashboard/learning-resources")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">📚 Learning Resources</button>

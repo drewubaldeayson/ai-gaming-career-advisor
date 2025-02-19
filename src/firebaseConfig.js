@@ -3,13 +3,14 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAuj421c4TfpG5yAs1zmsnxq1iFvJrabgM",
-    authDomain: "ai-gaming-career-advisor-temp.firebaseapp.com",
-    projectId: "ai-gaming-career-advisor-temp",
-    storageBucket: "ai-gaming-career-advisor-temp.firebasestorage.app",
-    messagingSenderId: "496989633867",
-    appId: "1:496989633867:web:e6802f8e3bf290745efcce"
-};
+    apiKey: "AIzaSyDnHDVr2SRz4oUDn-bx9O9_IrK8jkilDbA",
+    authDomain: "gareer-guide.firebaseapp.com",
+    projectId: "gareer-guide",
+    storageBucket: "gareer-guide.firebasestorage.app",
+    messagingSenderId: "855105007417",
+    appId: "1:855105007417:web:05fd6ae194cfa89e64c2e8",
+    measurementId: "G-Q0DJPD7TD9"
+  };
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
