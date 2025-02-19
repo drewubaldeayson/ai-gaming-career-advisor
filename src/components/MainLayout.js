@@ -14,11 +14,7 @@ const MainLayout = () => {
       <Sidebar />
       <div className="ml-64 flex-1 p-10">
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/career-insights" element={<CareerInsights />} />
-          <Route path="/learning-resources" element={<LearningResources />} />
-          <Route path="/gaming-skill-assessment" element={<GamingSkillAssessment />} />
-          <Route path="/ai-chatbot" element={<AIChatbot />} />
+          <Route path="/" element={<AIChatbot />} />
           <Route path="/subscription" element={<Subscription />} />
         </Routes>
       </div>

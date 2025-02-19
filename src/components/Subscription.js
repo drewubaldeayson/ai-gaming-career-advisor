@@ -46,7 +46,7 @@ const Subscription = () => {
       });
 
       alert(`Successfully subscribed to ${plan} (${billingCycle})!`);
-      navigate("/dashboard/gaming-skill-assessment");
+      navigate("/dashboard");
     } catch (error) {
       console.error("Subscription update failed:", error);
       alert("⚠️ Failed to update subscription. Try again later.");

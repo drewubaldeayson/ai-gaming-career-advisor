@@ -3,15 +3,16 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const navigate = useNavigate();
 
+  const logoutUser = () => {
+    navigate("/")
+  }
+
   return (
-    <div className="w-64 bg-gray-800 h-screen fixed left-0 top-0 p-6">
+    <div className="w-72 bg-gray-800 h-screen fixed left-0 top-0 p-6">
       <h2 className="text-white text-xl font-bold mb-4">Gareer Guide</h2>
-      <button onClick={() => navigate("/dashboard")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">🏠 Dashboard</button>
-      <button onClick={() => navigate("/dashboard/career-insights")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">📈 Career Insights</button>
-      <button onClick={() => navigate("/dashboard/learning-resources")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">📚 Learning Resources</button>
-      <button onClick={() => navigate("/dashboard/gaming-skill-assessment")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">🎮 Skill Assessment</button>
-      <button onClick={() => navigate("/dashboard/ai-chatbot")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">🤖 AI Career Guidance Chatbot</button>
+      <button onClick={() => navigate("/dashboard")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">🤖 AI Counselor Agent</button>
       <button onClick={() => navigate("/dashboard/subscription")} className="block text-white p-3 hover:bg-gray-700 w-full text-left">💳 Subscription</button>
+      <button onClick={logoutUser} className="block text-white p-3 hover:bg-gray-700 w-full text-left">Logout</button>
     </div>
   );
 };
