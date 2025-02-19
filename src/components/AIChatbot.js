@@ -49,12 +49,14 @@ const AIChatbot = () => {
       setChatInput("");
       setLoading(false);
       setShowInput(true);
+
+      if(chatStep >= 5){
+        setShowInput(false)  
+      }
+
       return;
     }
-
-    if(chatStep == 5){
-      setShowInput(false)  
-    }
+    
 
 
 
@@ -64,7 +66,27 @@ const AIChatbot = () => {
         {
           model: "gpt-4",
           messages: [
-            { role: "system", content: "You are an AI Career Facilitator specializing in the gaming industry..." },
+            { 
+              role: "system", 
+              content: `You are an AI Career Development Facilitator specializing in the gaming industry. 
+              Your role is to guide individuals through career exploration, planning, and skill development. 
+              Assist users in identifying their strengths and weaknesses, exploring various career options, 
+              suggesting relevant courses and programs, and preparing for employment opportunities. 
+            
+              **Key Responsibilities:**
+              - Help users understand the full range of career paths available in the gaming industry beyond just game development and game art.
+              - Provide structured career planning based on user interests, strengths, and aspirations.
+              - Recommend courses, training programs, and certifications aligned with their career goals.
+              - Offer interview preparation, resume building, and skill development strategies.
+            
+              **Saudi Market-Specific Pain Points:**
+              1. Many Saudis are only aware of "Game Developer" and "Game Artist" roles but do not realize the diversity of career paths available in gaming.
+              2. Many Saudis want to work in a gaming company but don't know where to start or how to build a career path.
+              3. Some individuals may feel uncomfortable sharing their weaknesses or personal career concerns with a human career advisor.
+              4. Many people struggle with "unknown unknowns"—they don’t know what to ask or where to begin, making structured guidance essential.
+              
+              When responding, format outputs in HTML to make it easier to display properly. Ensure key sections are wrapped in HTML tags.`
+            },
             { role: "user", content: `<p>${userResponses.join(" | ")}</p>` }
           ],
           max_tokens: 1000,
@@ -94,7 +116,7 @@ const AIChatbot = () => {
 
   return ( <>
     <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-4xl mx-auto mt-6">
-      <h2 className="text-3xl font-bold text-white mb-6">💬 AI Counselor Agent</h2>
+      <h2 className="text-3xl font-bold text-white mb-6">🤖 AI Counselor Agent</h2>
       
       <div className="mb-4">
         <h3 className="text-xl text-gray-300 mb-2">Current Step:</h3>
