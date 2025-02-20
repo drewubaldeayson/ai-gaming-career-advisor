@@ -31,7 +31,14 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-900">
+    <div className="flex flex-col justify-center items-center h-screen bg-gray-900">
+      {/* App Title Section */}
+      <div className="flex items-center mb-6">
+        <img src="/logo.png" alt="Gareer Guide Logo" className="w-10 h-10 mr-3" />
+        <h1 className="text-3xl font-bold text-white">Gareer Guide</h1>
+      </div>
+
+      {/* Login Form */}
       <div className="bg-gray-800 text-white p-8 rounded-lg shadow-lg w-96">
         <h2 className="text-2xl font-bold text-center mb-4">Login</h2>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
